@@ -1,0 +1,169 @@
+/* Adicionar a fonte Montserrat */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+/* Fonte padrão */
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Container Principal */
+.home-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #141414;
+}
+
+/* Estilos do Cabeçalho */
+.home-header-holder {
+  background-color: black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  z-index: 100000;
+}
+
+.home-header {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  font-size: 24px;
+}
+
+.home-header-logo-and-options-holder {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.home-header-logo {
+  width: 150px;
+}
+
+.home-header a {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400; /* Fonte regular */
+}
+
+/* Estilos do Contêiner de Filmes */
+.movie-holder {
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.movie-cover {
+  position: absolute;
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.movie-details {
+  position: relative;
+  z-index: 2;
+  width: 50%;
+  color: white;
+  padding-left: 2rem;
+}
+
+.movie-title {
+  font-size: 2.5rem;
+  font-weight: 700; /* Fonte negrito */
+  margin-bottom: 1rem;
+}
+
+.movie-description {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  max-height: 90px;
+  overflow-y: scroll;
+}
+
+.movie-description::-webkit-scrollbar {
+  display: none;
+}
+
+.movie-options {
+  display: flex;
+  gap: 1rem;
+}
+
+.play-movie-button,
+.my-list-button {
+  border-radius: 5px;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.play-movie-button {
+  background-color: white;
+  color: black;
+}
+
+.my-list-button {
+  background-color: rgb(85, 83, 83);
+  color: white;
+}
+
+/* Estilos do Grid de Filmes */
+.home-movie-grid-holder {
+  width: 100%;
+  padding: 2rem;
+  color: white;
+  position: relative; /* Para posicionar as setas de navegação */
+}
+
+.home-movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.small-cover {
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  z-index: 10000;
+}
+
+.small-cover:hover {
+  transform: scale(1.1);
+}
+
+/* Setas de Navegação */
+.navigation-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 100000000;
+  font-size: 2rem;
+}
+
+.navigation-arrow.left {
+  left: 0;
+}
+
+.navigation-arrow.right {
+  right: 0;
+}

@@ -1,0 +1,8 @@
+#root {
+  margin: 0 auto;
+  height: 100dvh;
+}
+body {
+  background-image: url("./imgs/background.jpg");
+  margin: 0;
+}

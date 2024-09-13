@@ -1,0 +1,110 @@
+/* Adicionar a fonte Montserrat */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+/* Fonte padrão */
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Estilos do Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100000;
+}
+
+.modal-content {
+  background: #333;
+  max-width: 1200px;
+  width: 90%;
+  position: relative;
+  color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif; /* Fonte aplicada ao modal */
+}
+
+.modal-header {
+  position: relative;
+  height: 400px;
+  background: #000;
+}
+
+.modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+
+.modal-header-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2rem;
+}
+
+.modal-title {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: 700; /* Fonte negrito */
+}
+
+.modal-description {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.modal-play-button {
+  padding: 0.5rem 2rem;
+  background-color: #e50914;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+.modal-play-button:hover {
+  background-color: #f40612;
+}
+
+.modal-footer {
+  padding: 1rem 2rem;
+  background: #222;
+}
+
+.modal-genres {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.genre {
+  background: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
